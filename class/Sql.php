@@ -36,9 +36,10 @@ class Sql extends PDO {
 
         $this->setParams($stmt, $params);
 
-        $stmt->execute();
+        if ($stmt->execute()) return $stmt;
 
-        return $stmt;
+        Echo "Erro na execução da instrução! ";
+        Die();
 
     }
 
