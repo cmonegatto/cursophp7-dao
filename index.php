@@ -26,14 +26,21 @@ require_once("config.php");
 //$aluno->insert();
 //echo $aluno;
 
+
+// Atualizando um registro
+//$usuario = new Usuario();
+//$usuario->loadById(8);
+//$usuario->update("professor", "novaSenha");
+//echo $usuario;
+
+
 $usuario = new Usuario();
 
 $usuario->loadById(8);
 
-$usuario->update("professor", "novaSenha");
+$usuario->delete();
 
 echo $usuario;
-
 
 
 ?>
